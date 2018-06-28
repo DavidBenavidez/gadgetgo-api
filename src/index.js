@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/api', router);
 app.use('*', (req, res) => res.redirect('/'));
 
-app.listen(3001, err => {
+app.listen(process.env.PORT || 5000, err => {
   if (err) {
     console.log(err);
   } else {
