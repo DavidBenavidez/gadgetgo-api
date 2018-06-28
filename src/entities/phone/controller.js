@@ -30,14 +30,18 @@ export const addPhones = async (req, res) => {
   var phones = await Promise.all(
     brands.map(brand => {
       return new Promise((resolve, reject) => {
-        fonoapi.getLatest(
-          (qs, phones) => {
-            phones = JSON.stringify(phones);
-            resolve(JSON.parse(phones));
-          },
-          15,
-          brand.Brand
-        );
+        try {
+          fonoapi.getLatest(
+            (qs, phones) => {
+              phones = JSON.stringify(phones);
+              resolve(JSON.parse(phones));
+            },
+            15,
+            brand.Brand
+          );
+        } catch (err) {
+          console.log(err);
+        }
       })
     })
   );
