@@ -8,7 +8,6 @@
     "prod:start": "node build/main.js",
     "build": "backpack build",
     "docs": "apidoc -i ./src -o ./docs",
-    "seed": "node ./src/seed",
     "precommit": "lint-staged"
   },
   "lint-staged": {
