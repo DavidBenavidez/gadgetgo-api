@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 mongoose.Promise = global.Promise;
 
-const db = mongoose.createConnection('mongodb://localhost/techBro');
+const db = mongoose.createConnection('mongodb://localhost/gadgetgo');
 
 db.on('error', err => console.log(err));
 
