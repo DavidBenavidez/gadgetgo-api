@@ -73,7 +73,7 @@ export const addPhones = async (req, res) => {
             var price = $('[data-spec=price]').text();
             var image = $('.specs-photo-main img').attr("src");
             price = price.split(' ');
-            price = price[1];
+            price = price[1].toFixed(2);
 
             if (!isNaN(price)) { // Check if price is a number
               price = price * 62.56; // Euros to pesos 
