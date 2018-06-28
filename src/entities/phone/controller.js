@@ -115,7 +115,7 @@ export const addPhones = async (req, res) => {
   return res.send({ Ok: phones.length });
 };
 
-export const findByBudget = async (req, res) => {
+export const findByBudget = (req, res) => {
   try {
     console.log('Price: ' + req.query.price);
     Phone.find(
@@ -139,7 +139,7 @@ export const findByBudget = async (req, res) => {
   }
 };
 
-export const findByBattery = async (req, res) => {
+export const findByBattery = (req, res) => {
   try {
     console.log('Battery! ' + req.query.price);
     Phone.find(
@@ -163,7 +163,7 @@ export const findByBattery = async (req, res) => {
   }
 };
 
-export const findByCamera = async (req, res) => {
+export const findByCamera = (req, res) => {
   try {
     Phone.find(
       { price: { $lte: parseInt(req.query.price) } },
@@ -202,7 +202,7 @@ export const findByCamera = async (req, res) => {
   }
 };
 
-export const findByDisplay = async (req, res) => {
+export const findByDisplay = (req, res) => {
   try {
     Phone.find(
       { price: { $lte: parseInt(req.query.price) } },

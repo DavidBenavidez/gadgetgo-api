@@ -4,7 +4,7 @@ mongoose.Promise = global.Promise;
 
 // const db = mongoose.createConnection('mongodb://localhost/gadgetgo');
 const db = mongoose.createConnection(
-  'mongodb://admin:password1.mlab.com:18168/gadgetgo',
+  'mongodb://admin:password1@ds018168.mlab.com:18168/gadgetgo',
 );
 db.on('error', err => console.log(err));
 
