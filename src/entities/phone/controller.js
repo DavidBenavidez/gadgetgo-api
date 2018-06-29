@@ -14,6 +14,10 @@ const brands = [
   { Brand: 'OnePlus' },
   { Brand: 'Samsung' },
   { Brand: 'Apple' },
+  { Brand: 'Sony' },
+  { Brand: 'Vivo' },
+  { Brand: 'Oppo' },
+  { Brand: 'Xiaomi' },
 ];
 const gsmarena = 'gsmarena';
 const phonearena = 'phonearena';
@@ -87,7 +91,7 @@ export const addPhones = async (req, res) => {
                 var price = $('[data-spec=price]').text();
                 var image = $('.specs-photo-main img').attr('src');
                 price = price.split(' ');
-                price = price[1].toFixed(2);
+                price = price[1];
 
                 if (!isNaN(price)) {
                   // Check if price is a number
@@ -141,7 +145,7 @@ export const findByBudget = (req, res) => {
 
 export const findByBattery = (req, res) => {
   try {
-    console.log('Battery! ' + req.query.price);
+    console.log('Price: ' + req.query.price);
     Phone.find(
       { price: { $lte: parseInt(req.query.price) } },
       (err, phones) => {
@@ -165,6 +169,7 @@ export const findByBattery = (req, res) => {
 
 export const findByCamera = (req, res) => {
   try {
+    console.log('Price: ' + req.query.price);
     Phone.find(
       { price: { $lte: parseInt(req.query.price) } },
       (err, phones) => {
@@ -203,6 +208,7 @@ export const findByCamera = (req, res) => {
 };
 
 export const findByDisplay = (req, res) => {
+  console.log('Price: ' + req.query.price);
   try {
     Phone.find(
       { price: { $lte: parseInt(req.query.price) } },
