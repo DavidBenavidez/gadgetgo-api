@@ -21,17 +21,17 @@
     "async-throttle": "^1.1.0",
     "axios": "^0.18.0",
     "backpack-core": "^0.7.0",
-    "bcrypt": "^1.0.3",
+    "bcrypt": "^3.0.0",
     "body-parser": "^1.18.2",
     "cheerio": "^1.0.0-rc.2",
     "connect-mongo": "^2.0.1",
-    "emailjs": "^2.0.0",
+    "emailjs": "^2.2.0",
     "escape-string-regexp": "^1.0.5",
     "express": "^4.16.2",
     "express-session": "^1.15.6",
     "fonoapi-nodejs": "^0.1.1",
     "google": "^2.1.0",
-    "mongoose": "^5.0.9",
+    "mongoose": "^5.2.5",
     "mongoose-paginate": "^5.0.3",
     "mongoose-unique-validator": "^2.0.0",
     "morgan": "^1.9.0",
@@ -42,9 +42,9 @@
   "devDependencies": {
     "apidoc": "^0.17.6",
     "husky": "^0.14.3",
-    "lint-staged": "^7.0.0",
-    "node": "^9.8.0",
-    "prettier": "^1.10.2",
+    "lint-staged": "^7.2.0",
+    "node": "^10.7.0",
+    "prettier": "^1.13.7",
     "shelljs": "^0.8.1"
   }
 }
