@@ -1,5 +1,0 @@
-Does the bot easily solve the user’s problem with the minimum number of steps?
-Does the bot solve the user’s problem better/easier/faster than any of the alternative experiences?
-Does the bot run on the devices and platforms the user cares about?
-Is the bot discoverable? Do the users naturally know what to do when using it?
-

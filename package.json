@@ -17,26 +17,13 @@
     ]
   },
   "dependencies": {
-    "amazon-product-api": "^0.4.4",
-    "async-throttle": "^1.1.0",
-    "axios": "^0.18.0",
     "backpack-core": "^0.7.0",
-    "bcrypt": "^3.0.0",
     "body-parser": "^1.18.2",
     "cheerio": "^1.0.0-rc.2",
-    "connect-mongo": "^2.0.1",
-    "emailjs": "^2.2.0",
-    "escape-string-regexp": "^1.0.5",
     "express": "^4.16.2",
-    "express-session": "^1.15.6",
     "fonoapi-nodejs": "^0.1.1",
     "google": "^2.1.0",
     "mongoose": "^5.2.5",
-    "mongoose-paginate": "^5.0.3",
-    "mongoose-unique-validator": "^2.0.0",
-    "morgan": "^1.9.0",
-    "node-cron": "^1.2.1",
-    "request": "^2.87.0",
     "request-promise": "^4.2.2"
   },
   "devDependencies": {

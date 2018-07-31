@@ -3,7 +3,6 @@ import fonoapi from 'fonoapi-nodejs';
 import request from 'request-promise';
 import cheerio from 'cheerio';
 import google from 'google';
-import limitRequests from 'async-throttle';
 
 fonoapi.token = '1da780c1a5c9bd7dec12ace6e83b326d88b6c8153649005e';
 google.resultsPerPage = 25;
@@ -25,16 +24,6 @@ const checkBatteryDisplayCamera = (display, battery, camera) => {
   if (isNaN(display) || isNaN(battery) || camera === 'Nope.') return false;
   return true;
 };
-
-/*
-  What do you prioritize in a phone?
-  Tough Battery!
-  Gorgeous Display!
-  Beautiful Camera!
-  Just give me the best bang for my buck!
-*/
-
-const throttleRequests = limitRequests(1); // Limits requests made
 
 export const addPhones = async (req, res) => {
   var phones = await Promise.all(
